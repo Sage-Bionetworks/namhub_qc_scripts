@@ -66,11 +66,11 @@ index 16c2030..dabe97c 100644
  HTAN_H5AD_VALIDATOR_CONTAINER = (
      "ghcr.io/sage-bionetworks-workflows/htan-h5ad-validator:0.1.1"
  )
-+FQ_LINT_CONTAINER = "ghcr.io/sage-bionetworks-workflows/qc-fq-lint:0.1.0"
-+FASTQC_CONTAINER = "ghcr.io/sage-bionetworks-workflows/qc-fastqc:0.1.0"
-+KRAKEN2_QC_CONTAINER = "ghcr.io/sage-bionetworks-workflows/qc-kraken2-qc:0.1.0"
++FQ_LINT_CONTAINER = "ghcr.io/sage-bionetworks/namhub_qc_scripts/fq_lint:v0.1.0"
++FASTQC_CONTAINER = "ghcr.io/sage-bionetworks/namhub_qc_scripts/fastqc:v0.1.0"
++KRAKEN2_QC_CONTAINER = "ghcr.io/sage-bionetworks/namhub_qc_scripts/kraken2_qc:v0.1.0"
 +MATRIX_CONTENT_QC_CONTAINER = (
-+    "ghcr.io/sage-bionetworks-workflows/qc-matrix-content-qc:0.1.0"
++    "ghcr.io/sage-bionetworks/namhub_qc_scripts/matrix_content_qc:v0.1.0"
 +)
  LIBTIFF_CONTAINER = "quay.io/sagebionetworks/libtiff:2.0"
  TIFFTOOLS_CONTAINER = "ghcr.io/sage-bionetworks-workflows/tifftools:latest"

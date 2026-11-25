@@ -61,8 +61,11 @@ images to be published first.
 
 - **File type name.** A manifest's file type column must use
   `CELLRANGER-MATRIX-TAR` for a matrix archive.
-- **Image names are placeholders.** The `ghcr.io/sage-bionetworks-workflows/qc-*:0.1.0`
-  values in `constants.py` must match where the images are published.
+- **Image names.** The values in `constants.py` are the names the publishing
+  workflow (`.github/workflows/publish-py-dcqc-images.yml`) gives each image:
+  `ghcr.io/sage-bionetworks/namhub_qc_scripts/<check folder>:<release tag>`.
+  They use `v0.1.0`; change the tag if the first release has a different one.
+  The GHCR packages must be public for nf-dcqc to pull them without logging in.
 - **Run py-dcqc's test suite on the patch.** The unit tests above were
   written but not run (see "How it was checked").
 
