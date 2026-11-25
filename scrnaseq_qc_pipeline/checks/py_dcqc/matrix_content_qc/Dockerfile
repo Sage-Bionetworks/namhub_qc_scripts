@@ -1,5 +1,5 @@
-# Build from the scrnaseq_qc_pipeline/ directory:
-#   docker build -f checks/py_dcqc/matrix_content_qc/Dockerfile -t qc-matrix-content .
+# Build from the repo root (namhub_qc_scripts/), like the other py_dcqc images:
+#   docker build -f scrnaseq_qc_pipeline/checks/py_dcqc/matrix_content_qc/Dockerfile -t qc-matrix-content .
 #
 # py-dcqc ExternalBaseTest image (Sage-Bionetworks-Workflows/py-dcqc#96):
 # no ENTRYPOINT/CMD -- nf-dcqc supplies the full command. Test it the same
@@ -21,6 +21,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends procps && \
 ENV HOME=/tmp
 ENV PYTHONDONTWRITEBYTECODE=1
 
-COPY scrnaseq_common.py matrix_qc.py /app/
-COPY checks/py_dcqc/matrix_content_qc/run.py /app/run.py
+COPY scrnaseq_qc_pipeline/scrnaseq_common.py scrnaseq_qc_pipeline/matrix_qc.py /app/
+COPY scrnaseq_qc_pipeline/checks/py_dcqc/matrix_content_qc/run.py /app/run.py
 RUN chmod 0755 /app/run.py
